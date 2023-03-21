@@ -1,33 +1,26 @@
-import { useState } from "react"
-import reactLogo from "./assets/react.svg"
-import viteLogo from "/vite.svg"
-import "./App.css"
+import Counter from "./components/Counter"
+import Title from "./components/Title"
+
+import bgPt from "./assets/background.jpg"
+
+import useCountdown from "./hooks/useCountdown"
+
+import "./index.css"
 
 function App() {
-	const [count, setCount] = useState(0)
+	const [day, hour, minute, second] = useCountdown("Mar 27, 2023 10:30:00")
 
 	return (
-		<div className="App container w-full">
-			<div className="flex justify-center">
-				<a href="https://vitejs.dev" target="_blank">
-					<img src={viteLogo} className="logo" alt="Vite logo" />
-				</a>
-				<a href="https://reactjs.org" target="_blank">
-					<img src={reactLogo} className="logo react" alt="React logo" />
-				</a>
+		<div className="App" style={{ backgroundImage: `url(${bgPt})` }}>
+			<div className="container">
+				<Title title="Contagem regressiva, nossa chegada em Portugal 🇵🇹" />
 			</div>
-			<h1>Vite + React</h1>
-			<div className="card bg-teal-100 rounded-2xl m-14">
-				<button onClick={() => setCount((count) => count + 1)}>
-					count is {count}
-				</button>
-				<p>
-					Edit <code>src/App.jsx</code> and save to test HMR
-				</p>
+			<div className="countdown-container">
+				<Counter title="Dias" number={day} />
+				<Counter title="Horas" number={hour} />
+				<Counter title="Minutos" number={minute} />
+				<Counter title="Segundos" number={second} />
 			</div>
-			<p className="read-the-docs">
-				Click on the Vite and React logos to learn more
-			</p>
 		</div>
 	)
 }

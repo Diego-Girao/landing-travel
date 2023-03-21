@@ -11,15 +11,20 @@ function App() {
 	const [day, hour, minute, second] = useCountdown("Mar 27, 2023 10:30:00")
 
 	return (
-		<div className="App mx-auto" style={{ backgroundImage: `url(${bgPt})` }}>
-			<div className="container h-screen p-36 mx-auto text-center font-extrabold text-4xl">
-				<Title title="Contagem regressiva, nossa chegada em Portugal 🇵🇹" />
-			</div>
-			<div className="countdown-container flex mx-auto justify-center text-center font-mono text-4xl font-bold gap-5">
-				<Counter title="Dias" number={day} />
-				<Counter title="Horas" number={hour} />
-				<Counter title="Minutos" number={minute} />
-				<Counter title="Segundos" number={second} />
+		<div className="container mx-auto">
+			<div className="card lg:card-side bg-base-100 shadow-xl">
+				<figure>
+					<img src={bgPt} alt="lisbon raiwls" />
+				</figure>
+				<div>
+					<div className="card-body">
+						<Title title="Chegaremos em Portugal 🇵🇹" />
+						<Counter title="Dias" number={day} />
+						<Counter title="Horas" number={hour} />
+						<Counter title="Minutos" number={minute} />
+						<Counter title="Segundos" number={second} />
+					</div>
+				</div>
 			</div>
 		</div>
 	)

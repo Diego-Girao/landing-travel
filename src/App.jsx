@@ -12,12 +12,12 @@ function App() {
 
 	return (
 		<div className="container mx-auto">
-			<div className="card lg:card-side bg-base-100 shadow-xl">
+			<div className="card bg-base-100 shadow-xl">
 				<figure>
 					<img src={bgPt} alt="lisbon raiwls" />
 				</figure>
 				<div>
-					<div className="card-body">
+					<div className="card-bod flex flex-row gap-5">
 						<Title title="Chegaremos em Portugal 🇵🇹" />
 						<Counter title="Dias" number={day} />
 						<Counter title="Horas" number={hour} />

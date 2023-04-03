@@ -4,7 +4,7 @@ Este foi um projeto curto da mentoria **Conquiste Sua Vaga** , foi uma landing p
 
 ### **Screenshot - Desktop**
 
-<img width="800px" src="src/assets/prints/desktop.png" alt="print da tela da versão desktop" />
+![image](https://user-images.githubusercontent.com/70491871/229601332-4748dbf8-0399-4138-977d-5ed22a96f778.png)
 
 ## Meu processo
 
